@@ -84,7 +84,7 @@ export default function Portfolio() {
           >
             {displayImages.map((src, i) => (
               <div
-                key={i}
+                key={i} 
                 className="flex-shrink-0 rounded-sm overflow-hidden group"
                 style={{ width: `${CARD_WIDTH}px` }}
               >
