@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "portfolio": "Trabajos",
+    "identifier": "Identificador",
+    "contact": "Contacto",
+    "budget": "Presupuesto",
+    "requestBudget": "Solicitar Presupuesto",
+    "openMenu": "Abrir menú"
+  },
+  "hero": {
+    "titleStart": "Transformamos tus",
+    "titleHighlight": "espacios verdes",
+    "subtitle": "Más de 30 años de experiencia en paisajismo, jardinería y mantenimiento en el Aljarafe y Sevilla",
+    "ctaPortfolio": "Ver nuestros trabajos",
+    "ctaWhatsapp": "Contactar por WhatsApp",
+    "scrollDown": "Scroll abajo"
+  },
+  "services": {
+    "title": "Nuestros",
+    "titleHighlight": "Servicios",
+    "subtitle": "Ofrecemos soluciones completas de jardinería y paisajismo con la calidad y experiencia que nos avalan",
+    "gardenDesign": "Diseño de Jardines",
+    "gardenDesignDesc": "Creamos espacios verdes personalizados que combinan estética y funcionalidad, adaptados a tu estilo y al clima mediterráneo.",
+    "landscaping": "Paisajismo",
+    "landscapingDesc": "Planificación integral de espacios exteriores, selección de especies autóctonas y diseño de zonas de descanso y recreo.",
+    "maintenance": "Mantenimiento",
+    "maintenanceDesc": "Servicio periódico de cuidado y mantenimiento de jardines: siega, abonado, tratamiento fitosanitario y limpieza.",
+    "pruning": "Podas",
+    "pruningDesc": "Poda de formación, mantenimiento y rejuvenecimiento de árboles y arbustos con técnicas profesionales.",
+    "felling": "Talas y Desbroces",
+    "fellingDesc": "Tala controlada de árboles, desbroce de parcelas y gestión de residuos vegetales con maquinaria profesional.",
+    "irrigation": "Instalación de Riego",
+    "irrigationDesc": "Diseño e instalación de sistemas de riego automático por goteo y aspersión, eficientes y ahorradores de agua."
+  },
+  "portfolio": {
+    "title": "Trabajos",
+    "titleHighlight": "Realizados",
+    "subtitle": "Descubre algunos de nuestros proyectos de jardinería y paisajismo en el Aljarafe y Sevilla",
+    "imageAlt": "Trabajo realizado"
+  },
+  "plant": {
+    "title": "Identificador de",
+    "titleHighlight": "Plantas",
+    "subtitle": "Sube una foto de cualquier planta y descubre su nombre, cuidados y características",
+    "uploadTitle": "Sube una foto de tu planta",
+    "uploadHint": "JPG, PNG o WEBP - Pulsa o arrastra aquí",
+    "identifyBtn": "Identificar Planta",
+    "loading": "Analizando imagen y buscando información...",
+    "noResult": "No hemos podido identificar la planta. Prueba con otra foto.",
+    "error": "Error al conectar con el servicio. Inténtalo de nuevo.",
+    "errorApiKey": "Configura tu clave de API en VITE_PLANT_ID_API_KEY",
+    "tryAnother": "Intentar con otra foto",
+    "probability": "Probabilidad",
+    "family": "Familia",
+    "genus": "Género",
+    "order": "Orden",
+    "description": "Descripción",
+    "watering": "Riego",
+    "light": "Luz",
+    "soil": "Suelo",
+    "toxicity": "Toxicidad",
+    "nonToxic": "No tóxica",
+    "commonUses": "Usos comunes",
+    "moreInfo": "Ver más información sobre esta planta",
+    "searchWiki": "Buscar en Wikipedia",
+    "identifyAnother": "Identificar otra planta",
+    "removeImage": "Eliminar imagen"
+  },
+  "contact": {
+    "titleStart": "Solicita tu",
+    "titleHighlight": "Presupuesto",
+    "subtitle": "Contacta con nosotros sin compromiso. Te asesoramos sobre la mejor solución para tu espacio verde",
+    "call": "Llamar",
+    "whatsapp": "WhatsApp",
+    "whatsappHint": "Escríbenos",
+    "email": "Email",
+    "emailHint": "Envíanos un correo",
+    "location": "Servicio en el Aljarafe y Sevilla"
+  },
+  "footer": {
+    "copyright": "Agroescacena. Todos los derechos reservados."
+  }
+}
