@@ -19,7 +19,7 @@ const placeholderImages = [
 
 const CARD_WIDTH = 400
 const GAP = 24
-const SPEED = 0.5
+const SPEED = 50 // pixels per second
 
 export default function Portfolio() {
   const images =
@@ -28,13 +28,18 @@ export default function Portfolio() {
   const offsetRef = useRef(0)
   const rafRef = useRef(null)
   const pausedRef = useRef(false)
+  const lastTimeRef = useRef(null)
 
   const singleSetWidth = images.length * (CARD_WIDTH + GAP)
 
-  const animate = useCallback(() => {
+  const animate = useCallback((time) => {
+    if (lastTimeRef.current == null) lastTimeRef.current = time
+    const delta = (time - lastTimeRef.current) / 1000
+    lastTimeRef.current = time
+
     const track = trackRef.current
     if (track && !pausedRef.current) {
-      offsetRef.current += SPEED
+      offsetRef.current += SPEED * delta
       if (offsetRef.current >= singleSetWidth) {
         offsetRef.current -= singleSetWidth
       }

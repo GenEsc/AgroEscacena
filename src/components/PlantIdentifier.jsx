@@ -60,75 +60,42 @@ export default function PlantIdentifier() {
         reader.readAsDataURL(image)
       })
 
-      const apiKey = import.meta.env.VITE_PLANT_ID_API_KEY
-      if (!apiKey) {
-        setError(t('plant.errorApiKey'))
-        setLoading(false)
-        return
-      }
-
-      const res = await fetch('https://api.plant.id/v3/identification', {
+      const res = await fetch('/api/plant-identify', {
         method: 'POST',
-        headers: {
-          'Api-Key': apiKey,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          images: [`data:image/jpeg;base64,${base64}`],
-          similar_images: true,
-          classification_level: 'species',
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ base64 }),
       })
 
       if (!res.ok) throw new Error('API error')
 
-      const data = await res.json()
-      const suggestions = data.result?.classification?.suggestions || []
+      const { suggestions, details } = await res.json()
 
-      if (suggestions.length === 0) {
+      if (!suggestions || suggestions.length === 0) {
         setError(t('plant.noResult'))
         return
       }
 
       const top = suggestions[0]
-      const scientificName = top.name
 
-      let details = null
       let translated = {}
       try {
-        const detailsRes = await fetch(
-          `https://api.plant.id/v3/kb/plants/name_search?q=${encodeURIComponent(scientificName)}&limit=1&lang=es`,
-          { headers: { 'Api-Key': apiKey } }
-        )
-        if (detailsRes.ok) {
-          const detailsData = await detailsRes.json()
-          const entity = detailsData.entities?.[0]
-          if (entity?.access_token) {
-            const plantRes = await fetch(
-              `https://api.plant.id/v3/kb/plants/${entity.access_token}?details=common_names,url,description,taxonomy,best_light_condition,best_soil_type,toxicity,common_uses&lang=es`,
-              { headers: { 'Api-Key': apiKey } }
-            )
-            if (plantRes.ok) {
-              details = await plantRes.json()
+        if (details) {
+          const fieldsToTranslate = {}
+          const l = toText(details?.best_light_condition)
+          const s = toText(details?.best_soil_type)
+          const tx = toText(details?.toxicity)
+          const desc = toText(details?.description)
+          if (l) fieldsToTranslate.light = l
+          if (s) fieldsToTranslate.soil = s
+          if (tx) fieldsToTranslate.toxicity = tx
+          if (desc) fieldsToTranslate.description = desc
 
-              const fieldsToTranslate = {}
-              const l = toText(details?.best_light_condition)
-              const s = toText(details?.best_soil_type)
-              const tx = toText(details?.toxicity)
-              const desc = toText(details?.description)
-              if (l) fieldsToTranslate.light = l
-              if (s) fieldsToTranslate.soil = s
-              if (tx) fieldsToTranslate.toxicity = tx
-              if (desc) fieldsToTranslate.description = desc
+          const rawUses = Array.isArray(details?.common_uses)
+            ? details.common_uses.filter((u) => typeof u === 'string')
+            : null
+          if (rawUses?.length) fieldsToTranslate.uses = rawUses
 
-              const rawUses = Array.isArray(details?.common_uses)
-                ? details.common_uses.filter((u) => typeof u === 'string')
-                : null
-              if (rawUses?.length) fieldsToTranslate.uses = rawUses
-
-              translated = await translateFields(fieldsToTranslate)
-            }
-          }
+          translated = await translateFields(fieldsToTranslate)
         }
       } catch (err) {
         console.warn('Plant details/translation error:', err)
