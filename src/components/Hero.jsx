@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-dark/70" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <div className="inline-block bg-white/90 backdrop-blur-sm rounded-lg px-10 pt-5 pb-10 mb-10 shadow-xl">
+        <div className="inline-block bg-white/90 backdrop-blur-sm rounded-lg px-10 pt-5 pb-5 mb-10 shadow-xl">
           <img
             src={logoContacto}
             alt="Agroescacena - Jardinería y Paisajismo"
