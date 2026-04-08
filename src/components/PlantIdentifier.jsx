@@ -143,7 +143,7 @@ export default function PlantIdentifier() {
   return (
     <section id="identificador" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
             {t('plant.title')}{' '}
             <span className="text-gold">{t('plant.titleHighlight')}</span>
@@ -153,7 +153,7 @@ export default function PlantIdentifier() {
           </p>
         </div>
 
-        <div className="reveal max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <div className="bg-white border border-dark/10 rounded-sm p-8 shadow-sm">
             {!preview ? (
               <label className="flex flex-col items-center justify-center gap-4 py-16 border-2 border-dashed border-dark/15 rounded-sm cursor-pointer hover:border-gold/40 transition-colors">

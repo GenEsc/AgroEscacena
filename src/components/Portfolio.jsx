@@ -61,7 +61,7 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="py-20 md:py-28 bg-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {t('portfolio.title')}{' '}
             <span className="text-gold">{t('portfolio.titleHighlight')}</span>
@@ -72,7 +72,7 @@ export default function Portfolio() {
         </div>
 
         <div
-          className="reveal relative overflow-hidden mx-auto"
+          className="relative overflow-hidden mx-auto"
           style={{
             maskImage:
               'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',

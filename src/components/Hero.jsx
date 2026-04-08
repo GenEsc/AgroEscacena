@@ -12,21 +12,21 @@ export default function Hero() {
       <div className="absolute inset-0 bg-dark/70" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <div className="inline-block bg-white/90 backdrop-blur-sm rounded-lg px-10 pt-5 pb-10 mb-10 shadow-xl animate-[fadeInUp_0.8s_ease_forwards]">
+        <div className="inline-block bg-white/90 backdrop-blur-sm rounded-lg px-10 pt-5 pb-10 mb-10 shadow-xl">
           <img
             src={logoContacto}
             alt="Agroescacena - Jardinería y Paisajismo"
             className="w-72 sm:w-80 md:w-96 lg:w-[28rem] h-auto"
           />
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-[fadeInUp_0.8s_ease_0.2s_both]">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
           {t('hero.titleStart')}{' '}
           <span className="text-gold">{t('hero.titleHighlight')}</span>
         </h1>
-        <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl mx-auto animate-[fadeInUp_0.8s_ease_0.4s_both]">
+        <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
           {t('hero.subtitle')}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-[fadeInUp_0.8s_ease_0.6s_both]">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#portfolio"
             className="bg-gold hover:bg-gold-light text-white font-semibold px-8 py-3.5 rounded-sm text-base transition-colors"
@@ -52,12 +52,6 @@ export default function Hero() {
         <ChevronDown size={32} />
       </a>
 
-      <style>{`
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
     </section>
   )
 }

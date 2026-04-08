@@ -32,7 +32,11 @@
     "felling": "Talas y Desbroces",
     "fellingDesc": "Tala controlada de árboles, desbroce de parcelas y gestión de residuos vegetales con maquinaria profesional.",
     "irrigation": "Instalación de Riego",
-    "irrigationDesc": "Diseño e instalación de sistemas de riego automático por goteo y aspersión, eficientes y ahorradores de agua."
+    "irrigationDesc": "Diseño e instalación de sistemas de riego automático por goteo y aspersión, eficientes y ahorradores de agua.",
+    "supplies": "Suministro de Plantas y Materiales",
+    "suppliesDesc": "Venta y suministro de plantas, árboles, sustratos, abonos y todo tipo de materiales para jardinería y paisajismo.",
+    "containers": "Alquiler de Cubas",
+    "containersDesc": "Cubas para retirada de restos de poda y suministro de estiércol, tierra vegetal, mantillo, compost y áridos."
   },
   "portfolio": {
     "title": "Trabajos",
@@ -43,7 +47,7 @@
   "plant": {
     "title": "Identificador de",
     "titleHighlight": "Plantas",
-    "subtitle": "Sube una foto de cualquier planta y descubre su nombre, cuidados y características",
+    "subtitle": "¿Tienes una planta y no sabes cuál es o qué cuidados necesita? ¡Sube una foto y te ayudamos a identificarla!",
     "uploadTitle": "Sube una foto de tu planta",
     "uploadHint": "JPG, PNG o WEBP - Pulsa o arrastra aquí",
     "identifyBtn": "Identificar Planta",
@@ -71,7 +75,7 @@
   "contact": {
     "titleStart": "Solicita tu",
     "titleHighlight": "Presupuesto",
-    "subtitle": "Contacta con nosotros sin compromiso. Te asesoramos sobre la mejor solución para tu espacio verde",
+    "subtitle": "Contacta con nosotros sin compromiso. Te asesoramos sobre la mejor solución para tu espacios",
     "call": "Llamar",
     "whatsapp": "WhatsApp",
     "whatsappHint": "Escríbenos",

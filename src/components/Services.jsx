@@ -5,6 +5,8 @@ import {
   Droplets,
   Axe,
   Leaf,
+  Sprout,
+  Truck,
 } from 'lucide-react'
 import { t } from '../i18n'
 
@@ -15,13 +17,15 @@ const services = [
   { icon: Scissors, titleKey: 'services.pruning', descKey: 'services.pruningDesc' },
   { icon: Axe, titleKey: 'services.felling', descKey: 'services.fellingDesc' },
   { icon: Droplets, titleKey: 'services.irrigation', descKey: 'services.irrigationDesc' },
+  { icon: Sprout, titleKey: 'services.supplies', descKey: 'services.suppliesDesc' },
+  { icon: Truck, titleKey: 'services.containers', descKey: 'services.containersDesc' },
 ]
 
 export default function Services() {
   return (
     <section id="servicios" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
             {t('services.title')}{' '}
             <span className="text-gold">{t('services.titleHighlight')}</span>
@@ -31,11 +35,11 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 reveal-stagger">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service) => (
             <div
               key={service.titleKey}
-              className="reveal-child group p-8 rounded-sm border border-dark/5 hover:border-gold/30 bg-white hover:shadow-lg transition-all duration-300"
+              className="group p-8 rounded-sm border border-dark/5 hover:border-gold/30 bg-white hover:shadow-lg transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-sm bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
                 <service.icon className="text-gold" size={28} />
