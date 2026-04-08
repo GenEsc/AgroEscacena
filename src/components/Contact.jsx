@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section id="contacto" className="py-20 md:py-28 bg-dark-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {t('contact.titleStart')}{' '}
             <span className="text-gold">{t('contact.titleHighlight')}</span>
@@ -15,7 +15,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="reveal max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="grid sm:grid-cols-3 gap-6">
             <a
               href="tel:657661148"
